@@ -1,33 +1,67 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eef4f8;
+    background: linear-gradient(135deg, #dbeafe, #f0fdf4); 
     color: #333;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 80px;
 }
 
-header ul {
-    list-style: none;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
     background-color: #eef4f8;
     padding: 20px;
     margin: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header li {
+.navbar li {
     margin: 0 25px;
 }
 
-header a {
+.navbar a {
     text-decoration: none;
     font-weight: bold;
     color: #0066cc;
     font-size: 16px;
 }
 
-header a:hover {
+.navbar a:hover {
     color: #004080;
+}
+
+.navbar .brand {
+    margin-left: auto;
+    margin-right: 340px;
+}
+
+.navbar .brand a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0066cc;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar .brand a:hover {
+    color: #004080;
+}
+
+.navbar .highlight {
+    color: #cc0000; 
+    font-family: 'Brush Script MT', cursive;
+    font-size: 26px;
 }
 
 section {
@@ -42,10 +76,11 @@ figure {
 }
 
 img {
-    border: 3px solid #0066cc;
+    border: none;
     width: 150px;
     height: 150px;
-    border-radius: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
@@ -81,6 +116,14 @@ p {
     width: 200px;
     margin-right: 30px;
     border-radius: 8px;
+}
+
+.profile-image img {
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.08);
 }
 
 .profile-flex {
@@ -155,3 +198,11 @@ p {
     color: #666;
 }
 
+.glass-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+}

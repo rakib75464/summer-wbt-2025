@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    list-style: none;
+    background-color: #eef4f8;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .brand a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0066cc;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar .highlight {
+    color: #cc0000;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 26px;
+}
+
+section {
+    padding: 40px 10%;
+    background-color: #ffffff;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0066cc;
+    margin-bottom: 30px;
+}
+
+.info-box p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #004080;
+}
+

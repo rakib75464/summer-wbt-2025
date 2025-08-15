@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Info</title>
+    <link rel="stylesheet" href="/WBT/CSS/display.css">
+</head>
+<body>
+<header>
+    <ul class="navbar">
+        <li class="brand"><a href="/WBT/index.html">Ra<span class="highlight">K</span>ib</a></li>
+    </ul>
+</header>
+
+<section>
+    <div id="loginDiv">
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" id="loginUsername">
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" id="loginPassword">
+        </div>
+        <div class="form-buttons">
+            <button id="loginBtn">Login</button>
+            <p id="errorMsg" style="color:red; display:none;">Invalid credentials!</p>
+        </div>
+    </div>
+
+    <div id="infoDiv" style="display:none;">
+        <h2>Your Submitted Information</h2>
+        <div class="info-box">
+            <p><strong>First Name:</strong> <span id="showFirstname"></span></p>
+            <p><strong>Last Name:</strong> <span id="showLastname"></span></p>
+            <p><strong>Email:</strong> <span id="showEmail"></span></p>
+            <p><strong>Meeting Type:</strong> <span id="showMeeting"></span></p>
+            <p><strong>Working Categories:</strong> <span id="showCategories"></span></p>
+            <p><strong>Consulting Date:</strong> <span id="showConsulting"></span></p>
+            <p><strong>Username:</strong> <span id="showUsername"></span></p>
+            <p><strong>Password:</strong> <span id="showPassword"></span></p>
+        </div>
+        <div class="buttons">
+            <button onclick="window.history.back()">Back</button>
+            <button onclick="alert('Form submission complete!')">OK</button>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const loginBtn = document.getElementById('loginBtn');
+    loginBtn.addEventListener('click', function() {
+        const inputUsername = document.getElementById('loginUsername').value;
+        const inputPassword = document.getElementById('loginPassword').value;
+        const data = JSON.parse(localStorage.getItem('contactData'));
+
+        if(data && inputUsername === data.username && inputPassword === data.password){
+            document.getElementById('loginDiv').style.display = 'none';
+            document.getElementById('infoDiv').style.display = 'block';
+
+            document.getElementById('showFirstname').textContent = data.firstname;
+            document.getElementById('showLastname').textContent = data.lastname;
+            document.getElementById('showEmail').textContent = data.email;
+            document.getElementById('showMeeting').textContent = data.meeting;
+            document.getElementById('showCategories').textContent = data.categories.join(', ');
+            document.getElementById('showConsulting').textContent = data.consulting;
+            document.getElementById('showUsername').textContent = data.username;
+            document.getElementById('showPassword').textContent = data.password;
+        } else {
+            document.getElementById('errorMsg').style.display = 'block';
+        }
+    });
+});
+</script>
+</body>
+</html>
