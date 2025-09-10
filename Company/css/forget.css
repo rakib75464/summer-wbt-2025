@@ -1,0 +1,136 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root{
+          --border-color: #444;
+          --text-color: #111;
+          --link-color: #4b2b7f;
+          --max-width: 1100px;
+        }
+
+        body{
+          font-family: Georgia, "Times New Roman", serif;
+          background: #fff;
+          color: var(--text-color);
+          padding: 24px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .site-wrapper {
+          width: 100%;
+          max-width: var(--max-width);
+          border: 3px solid var(--border-color);
+          display: flex;
+          flex-direction: column;
+          background: #fff;
+        }
+
+        .site-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 28px;
+          border-bottom: 3px solid var(--border-color);
+        }
+
+        /* brand area (logo + name) */
+        .brand{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .logo{
+          height: 46px;          
+          width: auto;
+          display: block;
+        }
+        .brand-text{
+          font-weight: 700;
+          font-size: 28px;
+          color: #0a0; 
+        }
+
+        .site-nav{
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .site-nav a{
+          color: var(--link-color);
+          text-decoration: underline;
+          margin: 0 6px;
+        }
+        .site-nav .sep{
+          color: var(--link-color);
+        }
+
+        .site-main{
+          min-height: 260px; 
+          padding: 36px 40px;
+          border-bottom: 3px solid var(--border-color);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; 
+        }
+
+        .welcome{
+          font-size: 28px;
+          font-weight: 700;
+          color: var(--text-color);
+          margin-bottom: 20px;
+        }
+
+        .forgot-form {
+          width: 100%;
+          max-width: 500px;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-group label {
+          display: block;
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
+
+        .form-group input {
+          width: 100%;
+          padding: 10px;
+          font-size: 16px;
+          border: 2px solid var(--border-color);
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .submit-btn {
+          background-color: #3ec46f;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          font-size: 18px;
+          cursor: pointer;
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .submit-btn:hover {
+          background-color: #35cc79;
+        }
+
+        .site-footer{
+          padding: 12px 24px;
+          text-align: center;
+          font-size: 18px;
+        }
+
+        @media (max-width: 700px){
+          .site-header{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+          }
+          .site-nav{
+            align-self: flex-end;
+          }
+          .brand-text{ font-size: 22px; }
+          .site-main{ padding: 20px; min-height: 180px; }
+        }
