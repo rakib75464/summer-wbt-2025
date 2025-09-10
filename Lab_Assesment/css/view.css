@@ -1,0 +1,135 @@
+.profile-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex: 0 0 120px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #888;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+.container {
+  border: 2px solid #333;
+  margin: 10px auto;
+  width: 900px;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 0 20px;
+}
+h1 {
+  font-size: 2em;
+  color: #1dad27;
+  margin: 0;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.company-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.nav-right {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.nav-right a {
+  color: purple;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.nav-right a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 1px solid #333;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  min-height: 220px;
+}
+
+.sidebar {
+  width: 260px;
+  border-right: 1.5px solid #888;
+  padding: 18px 18px 18px 18px;
+  background: #fff;
+}
+
+.sidebar-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  border-bottom: 1.5px solid #888;
+  padding-bottom: 4px;
+}
+
+.sidebar-links {
+  list-style-type: disc;
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.sidebar-links li {
+  margin-bottom: 7px;
+}
+
+.sidebar-links a {
+  color: purple;
+  text-decoration: none;
+}
+
+.sidebar-links a:hover {
+  text-decoration: underline;
+}
+
+.welcome-panel {
+  flex: 1;
+  padding: 18px 24px;
+  font-size: 1.2em;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.95em;
+}
